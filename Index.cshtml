@@ -1,0 +1,26 @@
+﻿@model WebApplication1.Models.CalculatorModel
+
+@{
+    ViewBag.Title = "Calculator";
+}
+
+<h2>Арифметична операція додавання</h2>
+
+@using (Html.BeginForm("Add", "Calculator", FormMethod.Post))
+{
+    <div>
+        <label for="num1">Число 1:</label>
+        <input type="text" name="Number1" id="num1" value="@Model.Number1" />
+    </div>
+    <div>
+        <label for="num2">Число 2:</label>
+        <input type="text" name="Number2" id="num2" value="@Model.Number2" />
+    </div>
+    <button type="submit">Додати</button>
+}
+
+<div>
+    <h3>Результат:</h3>
+    <p>@Model.Result</p>
+</div>
+
